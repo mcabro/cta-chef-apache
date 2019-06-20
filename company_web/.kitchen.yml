@@ -8,13 +8,15 @@ provisioner:
   # For example:
   #   always_update_cookbooks: <%= !ENV['CI'] %>
   always_update_cookbooks: true
+  client_rb:
+    chef_license: accept
 
 verifier:
   name: inspec
 
 platforms:
-  - name: ubuntu-16.04
-  - name: centos-7
+  - name: centos-6.7
+  - name: debian-9.8
 
 suites:
   - name: default
@@ -22,5 +24,5 @@ suites:
       - recipe[company_web::default]
     verifier:
       inspec_tests:
-        - test/integration/default
+        - test/smoke/default
     attributes:
