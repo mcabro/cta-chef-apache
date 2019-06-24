@@ -1,6 +1,6 @@
 <html>
   <body>
-    <h1><%= default['company_web']['company_name'] %></h1>
+    <h1><%= node['company_web']['company_name'] %></h1>
     <h2>PLATFORM: <%= node['platform'] %></h2>
     <h2>HOSTNAME: <%= node['hostname'] %></h2>
     <h2>MEMORY:   <%= node['memory']['total'] %></h2>
