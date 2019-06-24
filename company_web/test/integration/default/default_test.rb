@@ -12,7 +12,8 @@ unless os.windows?
   end
 end
 
-companyName = node['company_web']['company_name']
+#companyName = node['company_web']['company_name']
+companyName = 'My company name'
 
 describe command('curl localhost') do
   its('stdout') { should match(companyName) }
