@@ -8,9 +8,10 @@ members_pool = []
 
 all_web_nodes = search('node', 'role:web_server')
 
-all_web_nodes.each do |web_node|
+all_web_nodes.each_with_index do |web_node, index|
+ 
     webserver = {
-        'hostname' => web_node['cloud']['public_hostname'],
+        'hostname' => "web" + index.to_s + web_node['platform'] ,
         'ipaddress' => web_node['cloud']['public_ipv4'],
         'port' => 80,
         'ssl_port' => 80,
