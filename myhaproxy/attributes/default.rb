@@ -1,4 +1,5 @@
-
+=begin
+# se sustituye por una búsqueda en la receta default
 node.default['haproxy']['members'] = [
     {
         'hostname' => 'web1',
@@ -13,4 +14,4 @@ node.default['haproxy']['members'] = [
         'ssl_port' => 80,
     },    
 ]
-
+=end
